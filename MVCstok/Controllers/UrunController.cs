@@ -22,13 +22,11 @@ namespace MVCstok.Controllers
             List<SelectListItem> degerler = (from i in db.TBLKATEGORILER.ToList()
                                              select new SelectListItem
                                              {
-                                               Text = i.KATEGORIAD,
-                                               Value = i.KATEGORIID.ToString()
+                                                 Text = i.KATEGORIAD,
+                                                 Value = i.KATEGORIID.ToString()
                                              }).ToList();
             ViewBag.dgr = degerler;
             return View();  
-
-
         }
         [HttpPost]
         public ActionResult UrunEkle(TBLURUNLER p1)
@@ -36,6 +34,13 @@ namespace MVCstok.Controllers
             var ktg = db.TBLKATEGORILER.Where(m => m.KATEGORIID == p1.TBLKATEGORILER.KATEGORIID).FirstOrDefault();
             p1.TBLKATEGORILER = ktg;
             db.TBLURUNLER.Add(p1);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult SIL(int id)
+        {
+            var urun = db.TBLURUNLER.Find(id);
+            db.TBLURUNLER.Remove(urun);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

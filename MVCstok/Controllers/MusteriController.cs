@@ -28,5 +28,12 @@ namespace MVCstok.Controllers
             db.SaveChanges();
             return View();
         }
+        public ActionResult SIL(int id)
+        {
+            var müsteri = db.TBLMUSTERILER.Find(id);
+            db.TBLMUSTERILER.Remove(müsteri);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
