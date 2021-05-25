@@ -8,6 +8,7 @@ MvcStok is stock tracking program . You can reach your categories,products,price
  Asp.net Mvc, .net, html , boostrap , mssql
 
 
+![image](https://user-images.githubusercontent.com/32723458/119501915-0273d880-bd72-11eb-93c7-2c9f36e03c8d.png)
 
   
 
@@ -26,7 +27,8 @@ MvcStok is stock tracking program . You can reach your categories,products,price
 - Add-remove or update
 - change values
 
-  
+  ![image](https://user-images.githubusercontent.com/32723458/119501938-0acc1380-bd72-11eb-93ac-32997e584751.png)
+
 
 
 ```bash 
@@ -34,7 +36,8 @@ MvcStok is stock tracking program . You can reach your categories,products,price
   cd my-project
 ```
     
-  
+  ![image](https://user-images.githubusercontent.com/32723458/119501993-1a4b5c80-bd72-11eb-81c5-d913b997426a.png)
+
 ## Tests
 
 
