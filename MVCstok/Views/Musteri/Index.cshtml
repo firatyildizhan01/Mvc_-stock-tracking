@@ -14,15 +14,15 @@
     <tbody>
         @foreach (var mus in Model)
         {
-        <tr>
-            <th>@mus.MUSTERIID</th>
-            <td>@mus.MUSTERIAD</td>
-            <td>@mus.MUSTERISOYAD</td>
-            @*<td><a href="/MUSTERI/SIL/@mus.m" class="btn btn-danger">SİL</a></td>*@
- 
-            <td><a href="/Musteri/SIL/@mus.MUSTERIID" class="btn btn-danger">SİL</a></td>
-            <td><a href="/Musteri/MusteriGetir/@mus.MUSTERIID" class="btn btn-success">GUNCELLE</a></td>
-        </tr>
+            <tr>
+                <th>@mus.MUSTERIID</th>
+                <td>@mus.MUSTERIAD</td>
+                <td>@mus.MUSTERISOYAD</td>
+                @*<td><a href="/MUSTERI/SIL/@mus.m" class="btn btn-danger">SİL</a></td>*@
+                <td><a href="/Musteri/SIL/@mus.MUSTERIID" class="btn btn-danger">SİL</a></td>
+                <td><a href="/Musteri/MusteriGetir/@mus.MUSTERIID" class="btn btn-success">GUNCELLE</a></td>
+                <td>@Html.ActionLink("SİL BUTONU", "SIL", new { id=mus.MUSTERIID }, new { @class = "btn btn-warning", onclick = "return confirm('Gerçekten Silmek İstiyor Musunuz?')" })</td>
+            </tr>
         }
     </tbody>
 </table>
