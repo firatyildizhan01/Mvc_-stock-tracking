@@ -1,5 +1,7 @@
 ﻿@using MVCstok.Models.Entity
-@model List<TBLKATEGORILER>
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<TBLKATEGORILER>
 
 @{
     ViewBag.Title = "Index";
@@ -27,5 +29,6 @@
 
     </tbody>
 </table>
-<a href="/KATEGORI/YENIKATEGORI/"class="btn btn-primary">YENİ KATEGORİ EKLE</a>
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }))
+<a href="/KATEGORI/YENIKATEGORI/" class="btn btn-primary">YENİ KATEGORİ EKLE</a>
 
