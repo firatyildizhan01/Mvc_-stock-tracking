@@ -19,7 +19,7 @@ namespace MVCstok.Controllers
         {
             return View();
         }
-        [HttpGet]
+        [HttpPost]
         public ActionResult YeniSatis(TBLSATISLAR p)
         {
             db.TBLSATISLAR.Add(p);
